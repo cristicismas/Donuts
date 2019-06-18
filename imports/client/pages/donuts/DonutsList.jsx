@@ -45,7 +45,7 @@ class DonutsList extends React.Component {
                         )
                     })
                 }
-                <a href="" onClick={() => FlowRouter.go('donuts.create')}>Create a donut</a>
+                <a href="" onClick={() => FlowRouter.go('donuts')}>Create a donut</a>
             </div>
         )
     }

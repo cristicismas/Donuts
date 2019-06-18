@@ -1,0 +1,85 @@
+.donuts-create-container {
+  background-color: #bd8cbf;
+  padding-top: 100px;
+}
+
+#create-donut-form {
+  background-color: #440e62;
+  color: #f5f5f5;
+  min-height: 500px;
+  width: 400px;
+  margin: auto;
+  padding: 50px;
+  border-radius: 50px;
+  position: relative;
+  top: 70px;
+}
+
+#create-donut-form * {
+  color: #f5f5f5;
+}
+
+#create-donut-form h1.form-title {
+  text-align: center;
+  font-size: 25px;
+}
+
+#create-donut-form div {
+  margin-bottom: 20px;
+}
+
+#create-donut-form #donut-radio {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#create-donut-form .radio-title {
+  font-weight: normal;
+}
+
+#create-donut-form #donut-radio .donut-image {
+  width: 90px;
+  height: 90px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#create-donut-form #donut-radio .donut-image.active {
+  border: 1px solid #ccc;
+}
+
+#create-donut-form input[type="text"],
+#create-donut-form input[type="number"] {
+  width: 100%;
+  margin-top: 5px;
+  background-color: #dcdcdc;
+  color: #222;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+#create-donut-form button[type="submit"] {
+  padding: 15px;
+  background-color: #f26d7d;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Hide arrows on <input type="number" /> */
+#create-donut-form input::-webkit-outer-spin-button,
+#create-donut-form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#create-donut-form input[type=number] {
+  -moz-appearance:textfield;
+}

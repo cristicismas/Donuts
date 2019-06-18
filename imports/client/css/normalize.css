@@ -13,3 +13,8 @@ body {
 a {
   text-decoration: none;
 }
+
+.fill-space {
+  display: block;
+  width: 100%;
+}
