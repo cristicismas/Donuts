@@ -1,5 +1,7 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import '../css/Header.css';
+
+import Notifications from './Notifications';
 
 class Header extends Component {
   render() {
@@ -10,14 +12,6 @@ class Header extends Component {
       </header>
     )
   }
-}
-
-function Notifications() {
-  return (
-    <div className="notifications">
-      <img src="/images/bell-icon.png" />
-    </div>
-  )
 }
 
 export default Header;
