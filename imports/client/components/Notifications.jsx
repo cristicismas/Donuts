@@ -14,8 +14,8 @@ class Notifications extends Component {
     render() {
         const { showNotifications, notifications } = this.state;
 
-        const notificationsList = notifications.map(notif => (
-            <div className="notification-item">{notif}</div>
+        const notificationsList = notifications.map((notif, index) => (
+            <div className="notification-item" key={`${notif}-${index}`}>{notif}</div>
         ))
 
         return (
