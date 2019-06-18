@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../css/Form.css';
 import {AutoForm, AutoField, ErrorField} from 'uniforms-unstyled';
 import SimpleSchema from 'simpl-schema';
 
@@ -29,9 +30,12 @@ class Login extends React.Component {
                     <AutoField name="password" type="password"/>
                     <ErrorField name="password"/>
 
-                    <button type="submit">
-                        Login
-                    </button>
+                    <div className="fill-space buttons-group">
+                        <a href="#" className="forgot-password">Forgot Password</a>
+                        <button type="submit">
+                            Sign in
+                        </button>
+                    </div>
                 </AutoForm>
             </main>
         )

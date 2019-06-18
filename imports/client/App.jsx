@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/normailze.css';
+import './css/normalize.css';
 
 export default class App extends React.Component {
     constructor () {

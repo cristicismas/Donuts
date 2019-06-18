@@ -7,7 +7,7 @@ class Notifications extends Component {
 
         this.state = {
             showNotifications: false,
-            notifications: ['The duck was deleted with success!', 'hello world']
+            notifications: ['The duck was deleted with success!']
         };
     }
 

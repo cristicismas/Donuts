@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../css/Form.css';
 import {AutoForm, AutoField, ErrorField} from 'uniforms-unstyled';
 import SimpleSchema from 'simpl-schema';
 
@@ -37,8 +38,8 @@ class Register extends React.Component {
                     <AutoField name="confirm_password" type="password"/>
                     <ErrorField name="confirm_password"/>
 
-                    <button type="submit">
-                        Register
+                    <button type="submit" className="fill-space">
+                        Sign up
                     </button>
                 </AutoForm>
             </main>
