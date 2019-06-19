@@ -42,13 +42,13 @@ class DonutsList extends React.Component {
 
                                 <div className="right-side side">
                                     <p className="donut-price">{donut.price}</p><img className="icon donut-price-icon" src="/images/dollar-icon.png" />
-                                    <p className="donut-comestible">
+                                    <div className="donut-comestible">
                                         {
                                             donut.isComestible ? (
                                                 <img className="icon donut-comestible-icon" src="/images/check-icon.png" />
                                             ) : <div className="icon-placeholder donut-comestible-icon" />
                                         }
-                                    </p>
+                                    </div>
 
                                     {this.isDonutOwner(donut) &&
                                     <a href="" onClick={() => this.editDonut(donut._id)}><img className="icon action-icon" src="/images/pen-icon.png" /></a>}

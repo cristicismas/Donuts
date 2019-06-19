@@ -1,5 +1,5 @@
 import React from 'react';
-import {AutoForm, AutoField, ErrorField} from 'uniforms-unstyled';
+import {AutoForm, AutoField, ErrorField, ErrorsField} from 'uniforms-unstyled';
 import {DonutRadio} from './DonutRadio'
 import DonutsSchema from '/imports/db/donuts/schema';
 import '../../css/DonutsCreate.css';
@@ -18,7 +18,17 @@ export default class DonutsCreate extends React.Component {
     }
 
     onSubmit = (data) => {
-        Meteor.call('donut.create', data, (err) => {
+        const { donutImages } = this.state;
+
+        const activeDonutIndex = this.findActiveDonutIndex();
+        const activeDonut = activeDonutIndex ? donutImages[activeDonutIndex] : '';
+
+        const submitData = {
+            ...data, 
+            imageUrl: activeDonut
+        };
+
+        Meteor.call('donut.create', submitData, (err) => {
             if (!err) {
                 FlowRouter.go('donuts');
             }
@@ -35,6 +45,21 @@ export default class DonutsCreate extends React.Component {
                 images[i].classList.remove('active');
             }
         }
+    }
+
+    findActiveDonutIndex = () => {
+        const donuts = document.getElementsByClassName('donut-image');
+        
+        let index = null;
+
+        for (let i = 0; i < donuts.length; i++) {
+            if (donuts[i].classList.contains('active')) {
+                index = i;
+                break;
+            }
+        }
+
+        return index;
     }
 
     render() {

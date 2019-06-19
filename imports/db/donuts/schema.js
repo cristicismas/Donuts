@@ -4,6 +4,12 @@ const DonutsSchema = new SimpleSchema({
     name: {
         type: String
     },
+
+    imageUrl: {
+        type: String,
+        optional: true
+    },
+
     isComestible: {
         type: Boolean,
         optional: true
