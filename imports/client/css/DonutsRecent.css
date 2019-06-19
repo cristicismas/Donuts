@@ -1,0 +1,79 @@
+#recent-donuts {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#recent-donuts .donut-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 15px 20px 0px #ddd;
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 100px 20px;
+  padding: 10px 50px;
+  height: 330px;
+  width: 320px;
+  text-align: center;
+}
+
+#recent-donuts .donut-image {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: block;
+}
+
+#recent-donuts .donut-info {
+  margin-top: -50px;
+}
+
+#recent-donuts .donut-name {
+  font-size: 26px;
+  margin: 0;
+}
+
+#recent-donuts .donut-date {
+  color: #666;
+  font-size: 15px;
+  margin-top: 0;
+}
+
+#recent-donuts .donut-price {
+  font-size: 24px;
+  margin-top: 0;
+  color: #00668e;
+  margin-right: 5px;
+}
+
+#recent-donuts .icon.donut-price-icon {
+  width: 22px;
+  height: 22px;
+  margin-top: 5px;
+}
+
+#recent-donuts .icon {
+  width: 30px;
+  height: 30px;
+}
+
+#recent-donuts .donut-price-and-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#recent-donuts .donut-price-and-actions > * {
+  display: flex;
+  flex-direction: row;
+}
+
+#recent-donuts .right-side > * {
+  margin-left: 10px;
+}
+
+#recent-donuts .right-side > *:first-child {
+  margin-left: 130px;
+}
