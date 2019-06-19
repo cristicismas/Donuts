@@ -26,6 +26,21 @@
   margin: 25px 10px 20px 10px;
 }
 
+#donuts-list .donut-item .donut-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 14px;
+}
+
+#donuts-list .donut-item .donut-info > * {
+  margin: 0;
+}
+
+#donuts-list .donut-item .donut-info .donut-date {
+  font-size: 15px;
+  color: #444;
+}
+
 #donuts-list .donut-item .donut-price {
   color: #00668e;
   margin-right: 0;

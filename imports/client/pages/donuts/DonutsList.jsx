@@ -33,6 +33,7 @@ class DonutsList extends React.Component {
             <div id="donuts-list">
                 {
                     donuts.map(donut => {
+                        const donutDate = donut.createdAt.toLocaleDateString();
                         return (
                             <div key={donut._id} className="donut-item">
                                 <div className="left-side side">
@@ -40,7 +41,10 @@ class DonutsList extends React.Component {
                                         donut.imageUrl &&
                                         <img className="donut-image" src={donut.imageUrl} />
                                     }
-                                    <p className="donut-name">{donut.name}</p>
+                                    <div className="donut-info">
+                                        <p className="donut-name">{donut.name}</p>
+                                        <p className="donut-date">{donutDate}</p>
+                                    </div>
                                 </div>
 
                                 <div className="right-side side">
