@@ -1,3 +1,7 @@
+#auth {
+  padding-bottom: 60px;
+}
+
 #auth #welcome-message {
   text-align: center;
   color: #444;
