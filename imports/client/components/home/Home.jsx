@@ -1,9 +1,9 @@
 import React, {Component, Fragment} from 'react';
 import '../../css/Home.css';
 
-import Header from '../../components/Header';
-import Login from '../../pages/users/Login';
-import Register from '../../pages/users/Register';
+import Header from '../../components/home/Header';
+import Login from '../../components/users/Login';
+import Register from '../../components/users/Register';
 
 class Home extends Component {
     render() {

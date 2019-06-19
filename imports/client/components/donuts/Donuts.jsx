@@ -4,7 +4,7 @@ import '../../css/Donuts.css';
 import DonutsCreate from './DonutsCreate';
 import DonutsList from './DonutsList';
 import DonutsRecent from './DonutsRecent';
-import Header from '../../components/Header';
+import Header from '../home/Header';
 
 class Donuts extends Component {
     render() {

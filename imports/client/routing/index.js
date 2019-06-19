@@ -1,13 +1,13 @@
 import route from './router';
 
 //User
-import Register from '/imports/client/pages/users/Register';
-import Login from '/imports/client/pages/users/Login';
-import Home from '/imports/client/pages/home/Home';
+import Register from '/imports/client/components/users/Register';
+import Login from '/imports/client/components/users/Login';
+import Home from '/imports/client/components/home/Home';
 
 // donuts
-import Donuts from '/imports/client/pages/donuts/Donuts';
-import DonutsEdit from '/imports/client/pages/donuts/DonutsEdit';
+import Donuts from '/imports/client/components/donuts/Donuts';
+import DonutsEdit from '/imports/client/components/donuts/DonutsEdit';
 
 
 route('/', Home, {}, {
