@@ -1,8 +1,7 @@
 import route from './router';
 
 //User
-import Register from '/imports/client/components/users/Register';
-import Login from '/imports/client/components/users/Login';
+import Auth from '/imports/client/components/users/Auth';
 import Home from '/imports/client/components/home/Home';
 
 // donuts
@@ -14,11 +13,11 @@ route('/', Home, {}, {
     name: 'home'
 });
 
-route('/login', Login, {}, {
+route('/login', Auth, {}, {
     name: 'login'
 });
 
-route('/register', Register, {}, {
+route('/register', Auth, {}, {
     name: 'register'
 });
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../css/Form.css';
 import {AutoForm, AutoField, ErrorField} from 'uniforms-unstyled';
 import SimpleSchema from 'simpl-schema';
 
