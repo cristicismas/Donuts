@@ -53,3 +53,26 @@
   color: #f5f5f5;
   margin: 15px;
 }
+
+@media only screen and (max-width: 750px) {
+  #auth .forms {
+    flex-direction: column;
+  }
+
+  #auth .forms > * {
+    margin: 10px auto 100px;
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #auth .forms .buttons-group {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  #auth .forms .buttons-group .forgot-password {
+    font-size: 14px;
+    margin: 10px;
+  }
+}
