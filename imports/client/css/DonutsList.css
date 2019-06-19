@@ -68,3 +68,51 @@
   height: 30px;
   width: 30px;
 }
+
+@media only screen and (max-width: 800px) {
+  #donuts-list .donut-item {
+    width: 90%;
+    font-size: 19px;
+    padding: 0 10px 5px;
+  }
+
+  #donuts-list .donut-item:hover {
+    width: 90%;
+  }
+
+  #donuts-list .donut-item .side > * {
+    margin: 20px 5px 15px 5px;
+  }
+
+  #donuts-list .donut-item .donut-image {
+    width: 50px;
+    height: 50px;
+    margin: 15px 5px 0 5px;
+  }
+
+  #donuts-list .donut-item .right-side {
+    margin-top: 10px;
+  }
+
+  #donuts-list .donut-item .icon {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  #donuts-list .donut-item {
+    padding-top: 10px;
+    font-size: 16px;
+    align-items: center;
+  }
+
+  #donuts-list .donut-item .right-side {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  #donuts-list .donut-item .right-side > * {
+    margin-top: 5px;
+  }
+}
