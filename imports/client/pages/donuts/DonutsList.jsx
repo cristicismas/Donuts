@@ -1,6 +1,7 @@
 import React from 'react';
 import {withTracker} from 'meteor/react-meteor-data';
 import {Donuts} from '/imports/db';
+import '../../css/DonutsList.css';
 
 class DonutsList extends React.Component {
     constructor() {
@@ -29,23 +30,36 @@ class DonutsList extends React.Component {
         }
 
         return (
-            <div>
+            <div id="donuts-list">
                 {
                     donuts.map(donut => {
                         return (
-                            <div key={donut._id}>
-                                <p>Name: {donut.name}</p>
-                                <p>Price: {donut.price}</p>
-                                <p>Is Comestible? : {donut.isComestible ? 'Yes' : 'No'}</p>
-                                {this.isDonutOwner(donut) &&
-                                <a href="" onClick={() => this.editDonut(donut._id)}>Edit</a>}
-                                {this.isDonutOwner(donut) &&
-                                <a href="" onClick={() => this.removeDonut(donut._id)}>Remove</a>}
+                            <div key={donut._id} className="donut-item">
+                                <div className="left-side side">
+                                    <img className="donut-image" src='/images/donut-1.jpg' />
+                                    <p className="donut-name">{donut.name}</p>
+                                </div>
+
+                                <div className="right-side side">
+                                    <p className="donut-price">{donut.price}</p><img className="icon donut-price-icon" src="/images/dollar-icon.png" />
+                                    <p className="donut-comestible">
+                                        {
+                                            donut.isComestible ? (
+                                                <img className="icon donut-comestible-icon" src="/images/check-icon.png" />
+                                            ) : <div className="icon-placeholder donut-comestible-icon" />
+                                        }
+                                    </p>
+
+                                    {this.isDonutOwner(donut) &&
+                                    <a href="" onClick={() => this.editDonut(donut._id)}><img className="icon action-icon" src="/images/pen-icon.png" /></a>}
+
+                                    {this.isDonutOwner(donut) &&
+                                    <a href="" onClick={() => this.removeDonut(donut._id)}><img className="icon action-icon" src="/images/trash-icon.png" /></a>}
+                                </div>
                             </div>
                         )
                     })
                 }
-                <a href="" onClick={() => FlowRouter.go('donuts')}>Create a donut</a>
             </div>
         )
     }
