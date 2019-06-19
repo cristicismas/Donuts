@@ -16,6 +16,11 @@
   justify-content: space-between;
   padding: 10px 20px;
   font-size: 23px;
+  transition: all .2s;
+}
+
+#donuts-list .donut-item:hover {
+  width: 720px;
 }
 
 #donuts-list .donut-item .side {

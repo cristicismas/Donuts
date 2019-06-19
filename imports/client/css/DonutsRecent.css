@@ -16,6 +16,11 @@
   height: 330px;
   width: 320px;
   text-align: center;
+  transition: all .2s;
+}
+
+#recent-donuts .donut-item:hover {
+  transform: translateY(-10px);
 }
 
 #recent-donuts .donut-image {
