@@ -1,0 +1,132 @@
+#footer {
+  background-color: #fff;
+  margin-top: 100px;
+  padding: 100px;
+}
+
+#footer .flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#footer .flex > *:first-child {
+  font-size: 23px;
+  color: #777;
+  font-weight: bold;
+  width: 40%;
+  margin-right: 120px;
+}
+
+#footer #phone-number {
+  font-size: 23px;
+  color: #fbaf5d;
+  font-weight: bold;
+  letter-spacing: 0px;
+  text-align: right;
+}
+
+#footer .email-group {
+  display: flex;
+  border-radius: 15px;
+  justify-content: center;
+}
+
+#footer .email-group input,
+#footer .email-group button {
+  border: none;
+  border-radius: 0;
+  padding: 15px;
+  color: #f5f5f5;
+  font-size: 18px;
+}
+
+#footer .email-group input {
+  border-radius: 10px 0 0 10px;
+  background-color: #f06eaa;
+  max-width: 250px;
+}
+
+#footer .email-group button {
+  border-radius: 10px;
+  background-color: #fbaf5d;
+  margin-left: -10px;
+  cursor: pointer;
+}
+
+#footer .trademark {
+  text-align: center;
+  color: #fbaf5d;
+  font-size: 30px;
+  margin-top: 100px;
+}
+
+#footer .trademark::after {
+  content: 'TM';
+  font-size: 14px;
+  position: relative;
+  top: -15px;
+}
+
+@media only screen and (max-width: 1000px) {
+  #footer .flex {
+    flex-direction: column;
+  }
+
+  #footer .flex > *:first-child {
+    width: 60%;
+    margin: auto auto 40px;
+    text-align: center;
+  }
+
+  #footer #phone-number {
+    text-align: center;
+  }
+
+  #footer .email-group {
+    margin: auto;
+    width: 350px;
+    justify-content: space-between;
+  }
+
+  #footer .email-group input,
+  #footer .email-group button {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #footer {
+    padding: 20px;
+  }
+
+  #footer .flex {
+    padding: 30px;
+  }
+
+  #footer .email-group {
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  #footer .flex {
+    padding: 10px;
+  }
+
+  #footer #phone-number {
+    font-size: 19px;
+  }
+  
+  #footer .email-group {
+    flex-direction: column;
+  }
+
+  #footer .email-group input,
+  #footer .email-group button {
+    border-radius: 5px;
+    width: 90%;
+    margin: 15px auto;
+  }
+}

@@ -5,6 +5,7 @@ import DonutsCreate from './DonutsCreate';
 import DonutsList from './DonutsList';
 import DonutsRecent from './DonutsRecent';
 import Header from '../home/Header';
+import Footer from '../home/Footer';
 
 class Donuts extends Component {
     render() {
@@ -18,6 +19,7 @@ class Donuts extends Component {
                     <DonutsList />
                     <DonutsRecent />
                 </main>
+                <Footer />
             </Fragment>
         );
     }
