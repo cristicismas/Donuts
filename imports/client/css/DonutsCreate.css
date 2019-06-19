@@ -54,10 +54,20 @@
   padding: 5px;
   border-radius: 50%;
   cursor: pointer;
+  transition: all .2s;
+  border: 2px solid transparent;
+}
+
+#create-donut-form #donut-radio .donut-image:hover {
+  border: 2px solid #f26d7d;
+}
+
+#create-donut-form #donut-radio .donut-image:active {
+  transform: scale(.9);
 }
 
 #create-donut-form #donut-radio .donut-image.active {
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
 }
 
 #create-donut-form input[type="text"],
