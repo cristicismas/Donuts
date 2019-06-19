@@ -1,3 +1,62 @@
-#home {
-  margin-top: 50px;
+#home #hero {
+  min-height: calc(100vh - 50px);
+  min-width: 100%;
+  margin-top: -25px;
+  background-image: url('/images/hero.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#home #hero .hero-text {
+  position: absolute;
+  bottom: 35%;
+  left: 100px;
+  max-width: 400px;
+  font-weight: bold;
+}
+
+#home #hero .hero-text .hero-title {
+  color: #faae5c;
+  font-size: 30px;
+}
+
+#home #hero .hero-text .hero-description {
+  color: #444;
+}
+
+#home #hero #scroll-down-arrow {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  top: 40px;
+  transform: rotate(90deg);
+}
+
+#home #hero #scroll-down-arrow img {
+  cursor: pointer;
+}
+
+#home #features {
+  display: flex;
+  background-color: #ebeaea;
+}
+
+#home #features .feature {
+  width: 33%;
+  padding: 40px;
+  transition: all .5s;
+}
+
+#home #features .feature:hover {
+  background-color: #e7e5e5;
+}
+
+#home #features .feature-title {
+  margin-bottom: 25px;
+  color: #ff9e35;
+  font-size: 22px;
 }
