@@ -36,7 +36,10 @@ class DonutsList extends React.Component {
                         return (
                             <div key={donut._id} className="donut-item">
                                 <div className="left-side side">
-                                    <img className="donut-image" src='/images/donut-1.jpg' />
+                                    {
+                                        donut.imageUrl &&
+                                        <img className="donut-image" src={donut.imageUrl} />
+                                    }
                                     <p className="donut-name">{donut.name}</p>
                                 </div>
 

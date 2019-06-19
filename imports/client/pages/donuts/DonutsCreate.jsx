@@ -21,7 +21,7 @@ export default class DonutsCreate extends React.Component {
         const { donutImages } = this.state;
 
         const activeDonutIndex = this.findActiveDonutIndex();
-        const activeDonut = activeDonutIndex ? donutImages[activeDonutIndex] : '';
+        const activeDonut = donutImages[activeDonutIndex];
 
         const submitData = {
             ...data, 
