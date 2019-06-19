@@ -7,7 +7,7 @@ export class DonutRadio extends Component {
                 src={image}
                 className="donut-image"
                 key={`donut-image-${index}`}
-                onClick={() => this.props.makeActive(index)}
+                onClick={() => this.props.makeSelected(index)}
             />
         ));
 

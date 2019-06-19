@@ -22,7 +22,7 @@ export default class DonutsCreate extends React.Component {
     onSubmit = (data) => {
         const { donutImages, isComestible } = this.state;
 
-        const activeDonutIndex = this.findActiveDonutIndex();
+        const activeDonutIndex = this.findSelectedDonutIndex();
         const activeDonut = donutImages[activeDonutIndex];
 
         const submitData = {
@@ -31,8 +31,6 @@ export default class DonutsCreate extends React.Component {
             isComestible
         };
 
-        console.log(submitData);
-
         Meteor.call('donut.create', submitData, (err) => {
             if (!err) {
                 FlowRouter.go('donuts');
@@ -40,25 +38,25 @@ export default class DonutsCreate extends React.Component {
         });
     };
 
-    makeActive = donutIndex => {
+    makeSelected = donutIndex => {
         images = document.getElementsByClassName('donut-image');
 
         for (let i = 0; i < images.length; i++) {
             if (i === donutIndex) {
-                images[i].classList.add('active');
+                images[i].classList.add('selected');
             } else {
-                images[i].classList.remove('active');
+                images[i].classList.remove('selected');
             }
         }
     }
 
-    findActiveDonutIndex = () => {
+    findSelectedDonutIndex = () => {
         const donuts = document.getElementsByClassName('donut-image');
         
         let index = null;
 
         for (let i = 0; i < donuts.length; i++) {
-            if (donuts[i].classList.contains('active')) {
+            if (donuts[i].classList.contains('selected')) {
                 index = i;
                 break;
             }
@@ -78,7 +76,7 @@ export default class DonutsCreate extends React.Component {
 
                     <div className="form-group">
                         <h4 className="radio-title">Select a donut:</h4>
-                        <DonutRadio donuts={donutImages} makeActive={index => this.makeActive(index)}/>
+                        <DonutRadio donuts={donutImages} makeSelected={index => this.makeSelected(index)}/>
                     </div>
 
                     <div className="form-group">
