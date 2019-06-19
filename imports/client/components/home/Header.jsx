@@ -7,7 +7,7 @@ class Header extends Component {
     render() {
         return (
             <header>
-                <h1>donut</h1>
+                <a href="/"><h1>donut</h1></a>
                 <Notifications />
             </header>
         )
