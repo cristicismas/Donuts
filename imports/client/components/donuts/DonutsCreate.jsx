@@ -63,12 +63,12 @@ export default class DonutsCreate extends React.Component {
 
                     <div className="form-group">
                         <AutoField name="name"/>
-                        <ErrorField name="name"/>
+                        <ErrorField name="name" className="error"/>
                     </div>
 
                     <div className="form-group">
                         <AutoField name="price"/>
-                        <ErrorField name="price"/>  
+                        <ErrorField name="price" className="error"/>  
                     </div>
 
                     <IsComestible isComestible={isComestible} handleChange={isComestible => this.setState({ isComestible })} />

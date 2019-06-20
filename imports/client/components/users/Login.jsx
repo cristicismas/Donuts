@@ -25,10 +25,10 @@ class Login extends React.Component {
                 <h2 className="form-title">Log In</h2>
                 <AutoForm schema={LoginSchema} onSubmit={this.onSubmit}>
                     <AutoField name="email"/>
-                    <ErrorField name="email"/>
+                    <ErrorField name="email" className="error"/>
 
                     <AutoField name="password" type="password"/>
-                    <ErrorField name="password"/>
+                    <ErrorField name="password" className="error"/>
 
                     <div className="fill-space buttons-group">
                         <a href="#" className="forgot-password">Forgot Password</a>

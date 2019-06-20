@@ -31,13 +31,13 @@ class Register extends React.Component {
                 
                 <AutoForm schema={RegisterSchema} onSubmit={this.onSubmit}>
                     <AutoField name="email"/>
-                    <ErrorField name="email"/>
+                    <ErrorField name="email" className="error"/>
 
                     <AutoField name="password" type="password"/>
-                    <ErrorField name="password"/>
+                    <ErrorField name="password" className="error"/>
 
                     <AutoField name="confirm_password" type="password"/>
-                    <ErrorField name="confirm_password"/>
+                    <ErrorField name="confirm_password" className="error"/>
 
                     <button type="submit" className="fill-space">
                         Sign up
