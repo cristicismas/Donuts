@@ -1,0 +1,48 @@
+#donuts-edit .form-title {
+  text-align: center;
+  font-size: 25px;
+  margin-top: -15px;
+}
+
+#donuts-edit .form-group {
+  margin-bottom: 20px;
+}
+
+#donuts-edit input[type="text"],
+#donuts-edit input[type="number"] {
+  width: 100%;
+  margin-top: 5px;
+  background-color: #dcdcdc;
+  color: #222;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+#donuts-edit button[type="submit"] {
+  padding: 15px;
+  background-color: #f26d7d;
+  color: #eee;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+#donuts-edit button[type="submit"]:hover {
+  background-color: #e74457;
+}
+
+/* Hide arrows on <input type="number" /> */
+#donuts-edit input::-webkit-outer-spin-button,
+#donuts-edit input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#donuts-edit input[type=number] {
+  -moz-appearance:textfield;
+}

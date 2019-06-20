@@ -3,11 +3,24 @@ import {withTracker} from 'meteor/react-meteor-data';
 import {Donuts} from '/imports/db';
 import '../../css/DonutsRecent.css';
 
+import Overlay from '../home/Overlay';
+import DonutsEdit from './DonutsEdit';
+
 class DonutsRecent extends React.Component {
-    constructor() {
-        super();
-        this.removeDonut = this.removeDonut.bind(this);
-        this.editDonut = this.editDonut.bind(this);
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            donut: null,
+            donutImages: [
+                '/images/donut-1.jpg',
+                '/images/donut-2.jpg',
+                '/images/donut-3.jpg'
+            ],
+            selectedDonutImage: '',
+            isComestible: true,
+            loading: true
+        }
     }
 
     isDonutOwner = (donut) => {
@@ -15,15 +28,34 @@ class DonutsRecent extends React.Component {
     };
 
     editDonut = (_id) => {
-        FlowRouter.go('donuts.edit', {_id: _id});
+        this.setState({
+            showDonutEditOverlay: true,
+            donutToEditId: _id
+        });
     };
+
+    closeEditOverlay = () => {
+        this.setState({
+            showDonutEditOverlay: false,
+            donutToEditId: null
+        });
+    }
 
     removeDonut = (_id) => {
         Meteor.call('donut.remove', _id);
     };
 
     render() {
-        const { donuts } = this.props;
+
+        const {showDonutEditOverlay, donutToEditId} = this.state;
+        const {donuts} = this.props;
+
+        const EditOverlay = showDonutEditOverlay ? (
+            <Overlay closeOverlay={this.closeEditOverlay}>
+                <DonutsEdit donutId={donutToEditId} closeOverlay={this.closeEditOverlay} />
+            </Overlay>
+        ) : null;
+        
         const recentDonuts = donuts.slice(donuts.length - 3, donuts.length);
 
         const donutsToRender = recentDonuts.map(donut => {
@@ -60,6 +92,7 @@ class DonutsRecent extends React.Component {
 
         return (
             <section id="recent-donuts">
+                {EditOverlay}
                 {donutsToRender}
             </section>
         );

@@ -6,7 +6,6 @@ import Home from '/imports/client/components/home/Home';
 
 // donuts
 import Donuts from '/imports/client/components/donuts/Donuts';
-import DonutsEdit from '/imports/client/components/donuts/DonutsEdit';
 
 
 route('/', Home, {}, {
@@ -22,16 +21,5 @@ route('/register', Auth, {}, {
 });
 
 route('/donuts', Donuts, {}, {
-    name: 'donuts'
-});
-
-route('/donuts', Donuts, {}, {
     name: 'donuts.list'
 });
-
-route('/donuts/edit/:_id', DonutsEdit, {}, {
-    name: 'donuts.edit'
-});
-
-
-
