@@ -15,58 +15,36 @@ export default class DonutsCreate extends React.Component {
                 '/images/donut-2.jpg',
                 '/images/donut-3.jpg'
             ],
+            selectedDonutImage: '',
             isComestible: true
         };
     }
 
     onSubmit = (data) => {
-        const { donutImages, isComestible } = this.state;
+        const { selectedDonutImage, isComestible } = this.state;
 
-        const activeDonutIndex = this.findSelectedDonutIndex();
-        const activeDonut = donutImages[activeDonutIndex];
+        const imageUrl = selectedDonutImage;
 
         const submitData = {
             ...data, 
-            imageUrl: activeDonut,
+            imageUrl,
             isComestible
         };
 
         Meteor.call('donut.create', submitData, (err) => {
             if (!err) {
-                FlowRouter.go('donuts');
+                FlowRouter.go('donuts.list');
             }
         });
     };
 
-    makeSelected = donutIndex => {
-        images = document.getElementsByClassName('donut-image');
-
-        for (let i = 0; i < images.length; i++) {
-            if (i === donutIndex) {
-                images[i].classList.add('selected');
-            } else {
-                images[i].classList.remove('selected');
-            }
-        }
-    }
-
-    findSelectedDonutIndex = () => {
-        const donuts = document.getElementsByClassName('donut-image');
-        
-        let index = null;
-
-        for (let i = 0; i < donuts.length; i++) {
-            if (donuts[i].classList.contains('selected')) {
-                index = i;
-                break;
-            }
-        }
-
-        return index;
+    handleImageSelection = index => {
+        const { donutImages } = this.state;
+        this.setState({ selectedDonutImage: donutImages[index] });
     }
 
     render() {
-        const { donutImages, isComestible } = this.state;
+        const { donutImages, selectedDonutImage } = this.state;
 
         return (
             <main>
@@ -76,7 +54,11 @@ export default class DonutsCreate extends React.Component {
 
                     <div className="form-group">
                         <h4 className="radio-title">Select a donut:</h4>
-                        <DonutRadio donuts={donutImages} makeSelected={index => this.makeSelected(index)}/>
+                        <DonutRadio 
+                            donuts={donutImages} 
+                            selectedImage={selectedDonutImage}
+                            selectedBorderColor='#ccc'
+                            handleImageSelection={url => this.handleImageSelection(url)} />
                     </div>
 
                     <div className="form-group">

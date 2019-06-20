@@ -36,40 +36,6 @@
   margin-bottom: 20px;
 }
 
-#create-donut-form #donut-radio {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-#create-donut-form .radio-title {
-  font-weight: normal;
-  margin-bottom: 0;
-}
-
-#create-donut-form #donut-radio .donut-image {
-  width: 90px;
-  height: 90px;
-  margin: 5px;
-  padding: 5px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all .2s;
-  border: 2px solid transparent;
-}
-
-#create-donut-form #donut-radio .donut-image:hover {
-  border: 2px solid #f26d7d;
-}
-
-#create-donut-form #donut-radio .donut-image:active {
-  transform: scale(.9);
-}
-
-#create-donut-form #donut-radio .donut-image.selected {
-  border: 2px solid #ccc;
-}
-
 #create-donut-form input[type="text"],
 #create-donut-form input[type="number"] {
   width: 100%;
@@ -153,10 +119,6 @@
 @media only screen and (max-width: 500px) {
   #create-donut-form {
     width: 90%;
-  }
-
-  #create-donut-form #donut-radio .donut-image {
-    margin: 0px;
   }
   
   #create-donut-form h1.form-title {
