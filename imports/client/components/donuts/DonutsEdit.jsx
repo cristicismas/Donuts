@@ -88,7 +88,7 @@ export default class DonutsEdit extends React.Component {
                         <ErrorField name="price"/>  
                     </div>
 
-                    <IsComestible handleChange={isComestible => this.setState({ isComestible })} />
+                    <IsComestible isComestible={donut.isComestible} handleChange={isComestible => this.setState({ isComestible })} />
 
                     <button type="submit" className="fill-space">
                         Edit donut

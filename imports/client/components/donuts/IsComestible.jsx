@@ -3,6 +3,8 @@ import '../../css/IsComestible.css';
 
 export class IsComestible extends Component {
     render() {
+        const { isComestible } = this.props;
+
         return (
           <div className="is-comestible-radio">
             <label>Can you eat this?</label>
@@ -15,7 +17,7 @@ export class IsComestible extends Component {
                         type="radio" 
                         name="is-comestible" 
                         value="yes" 
-                        defaultChecked
+                        defaultChecked={isComestible ? true : false}
                         onClick={() => this.props.handleChange(true)} />
                 </div>
 
@@ -25,6 +27,7 @@ export class IsComestible extends Component {
                         type="radio" 
                         name="is-comestible" 
                         value="no"
+                        defaultChecked={isComestible ? false : true}
                         onClick={() => this.props.handleChange(false)} />
                 </div>
             </div>

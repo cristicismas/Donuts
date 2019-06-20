@@ -44,7 +44,7 @@ export default class DonutsCreate extends React.Component {
     }
 
     render() {
-        const { donutImages, selectedDonutImage } = this.state;
+        const { donutImages, selectedDonutImage, isComestible } = this.state;
 
         return (
             <main>
@@ -71,7 +71,7 @@ export default class DonutsCreate extends React.Component {
                         <ErrorField name="price"/>  
                     </div>
 
-                    <IsComestible handleChange={isComestible => this.setState({ isComestible })} />
+                    <IsComestible isComestible={isComestible} handleChange={isComestible => this.setState({ isComestible })} />
 
                     <button type="submit" className="fill-space">
                         Create donut
