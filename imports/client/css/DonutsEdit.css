@@ -1,5 +1,5 @@
 #donuts-edit {
-  height: 500px;
+  min-height: 500px;
 }
 
 #donuts-edit .form-title {
