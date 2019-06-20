@@ -12,8 +12,8 @@
   margin-bottom: 20px;
 }
 
-#donuts-edit input[type="text"],
-#donuts-edit input[type="number"] {
+#donuts-edit input[type='text'],
+#donuts-edit input[type='number'] {
   width: 100%;
   margin-top: 5px;
   background-color: #dcdcdc;
@@ -26,17 +26,17 @@
   display: block;
 }
 
-#donuts-edit button[type="submit"] {
+#donuts-edit button[type='submit'] {
   padding: 15px;
   background-color: #f26d7d;
   color: #eee;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
-#donuts-edit button[type="submit"]:hover {
+#donuts-edit button[type='submit']:hover {
   background-color: #e74457;
 }
 
@@ -47,6 +47,6 @@
   margin: 0;
 }
 
-#donuts-edit input[type=number] {
-  -moz-appearance:textfield;
+#donuts-edit input[type='number'] {
+  -moz-appearance: textfield;
 }

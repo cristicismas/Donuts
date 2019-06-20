@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../../css/IsComestible.css';
 
-export class IsComestible extends Component {
+export class IsComestible extends React.Component {
     render() {
         const { isComestible } = this.props;
 
@@ -32,7 +32,7 @@ export class IsComestible extends Component {
                 </div>
             </div>
           </div>
-        )
+        );
     }
 }
 

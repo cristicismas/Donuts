@@ -1,5 +1,5 @@
 import React from 'react';
-import {AutoForm, AutoField, ErrorField} from 'uniforms-unstyled';
+import { AutoForm, AutoField, ErrorField } from 'uniforms-unstyled';
 import DonutsSchema from '/imports/db/donuts/schema';
 import '../../css/DonutsEdit.css';
 
@@ -20,7 +20,7 @@ export default class DonutsEdit extends React.Component {
             selectedDonutImage: '',
             isComestible: true,
             loading: true
-        }
+        };
     }
 
     componentDidMount() {
@@ -29,11 +29,11 @@ export default class DonutsEdit extends React.Component {
                 donut,
                 selectedDonutImage: donut.imageUrl,
                 loading: false
-            })
-        })
+            });
+        });
     }
 
-    onSubmit = (data) => {
+    onSubmit = data => {
         const { selectedDonutImage, isComestible } = this.state;
 
         const imageUrl = selectedDonutImage;
@@ -58,7 +58,7 @@ export default class DonutsEdit extends React.Component {
     }
 
     render() {
-        const {loading, donut, donutImages, selectedDonutImage} = this.state;
+        const { loading, donut, donutImages, selectedDonutImage } = this.state;
 
         if (loading) {
             return <div>Loading...</div>
@@ -95,6 +95,6 @@ export default class DonutsEdit extends React.Component {
                     </button>
                 </AutoForm>
             </section>
-        )
+        );
     }
 }

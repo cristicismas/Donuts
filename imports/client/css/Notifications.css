@@ -27,7 +27,7 @@
 
 @keyframes scale-and-fade {
   0% {
-    transform: scale(.4);
+    transform: scale(0.4);
     opacity: 0;
   }
   100% {
@@ -41,8 +41,8 @@
   width: 230px;
   right: -60px;
   top: 50px;
-  transform: scale(.4);
-  animation: scale-and-fade .2s forwards;
+  transform: scale(0.4);
+  animation: scale-and-fade 0.2s forwards;
 }
 
 .notifications-list:before {
@@ -53,7 +53,7 @@
   background-color: #eee;
   border-radius: 5px;
   transform: rotate(50deg) skew(15deg);
-  opacity: .7;
+  opacity: 0.7;
   position: relative;
   left: 145px;
   top: 20px;

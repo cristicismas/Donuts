@@ -1,6 +1,6 @@
 import React from 'react';
-import {withTracker} from 'meteor/react-meteor-data';
-import {Donuts} from '/imports/db';
+import { withTracker } from 'meteor/react-meteor-data';
+import { Donuts } from '/imports/db';
 import '../../css/DonutsRecent.css';
 
 import Overlay from '../home/Overlay';
@@ -23,11 +23,11 @@ class DonutsRecent extends React.Component {
         }
     }
 
-    isDonutOwner = (donut) => {
+    isDonutOwner = donut => {
         return donut.userId === Meteor.userId()
     };
 
-    editDonut = (_id) => {
+    editDonut = _id => {
         this.setState({
             showDonutEditOverlay: true,
             donutToEditId: _id
@@ -41,14 +41,14 @@ class DonutsRecent extends React.Component {
         });
     }
 
-    removeDonut = (_id) => {
+    removeDonut = _id => {
         Meteor.call('donut.remove', _id);
     };
 
     render() {
 
-        const {showDonutEditOverlay, donutToEditId} = this.state;
-        const {donuts} = this.props;
+        const { showDonutEditOverlay, donutToEditId } = this.state;
+        const { donuts } = this.props;
 
         const EditOverlay = showDonutEditOverlay ? (
             <Overlay closeOverlay={this.closeEditOverlay}>
@@ -87,7 +87,7 @@ class DonutsRecent extends React.Component {
                         </div>
                     </div>
                 </div>
-            )
+            );
         });
 
         return (

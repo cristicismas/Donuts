@@ -1,5 +1,5 @@
 import React from 'react';
-import {AutoForm, AutoField, ErrorField} from 'uniforms-unstyled';
+import { AutoForm, AutoField, ErrorField } from 'uniforms-unstyled';
 import SimpleSchema from 'simpl-schema';
 
 class Register extends React.Component {
@@ -9,7 +9,7 @@ class Register extends React.Component {
     }
 
     onSubmit = (data) => {
-        const {email, password} = data;
+        const { email, password } = data;
 
         Accounts.createUser({
             email,
@@ -44,7 +44,7 @@ class Register extends React.Component {
                     </button>
                 </AutoForm>
             </main>
-        )
+        );
     }
 }
 

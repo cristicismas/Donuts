@@ -1,10 +1,10 @@
-import React, {Component, Fragment} from 'react';
+import React, { Fragment } from 'react';
 import '../../css/Home.css';
 
 import Header from './Header';
 import Footer from './Footer';
 
-class Home extends Component {
+class Home extends React.Component {
     render() {
         return (
             <Fragment>
@@ -39,7 +39,7 @@ class Home extends Component {
                 </main>
                 <Footer />
             </Fragment>
-        )
+        );
     }
 }
 

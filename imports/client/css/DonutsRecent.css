@@ -17,7 +17,7 @@
   padding: 10px 50px;
   width: 320px;
   text-align: center;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 #recent-donuts .donut-item:hover {
@@ -94,7 +94,7 @@
   #recent-donuts .donut-item {
     width: 270px;
   }
-  
+
   #recent-donuts .right-side > *:first-child {
     margin-left: 50px;
   }

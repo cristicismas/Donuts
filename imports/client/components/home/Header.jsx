@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../../css/Header.css';
 
 import Notifications from './Notifications';
 
-class Header extends Component {
+class Header extends React.Component {
     render() {
         const loggedIn = Meteor.userId() ? true : false;
 
@@ -23,7 +23,7 @@ class Header extends Component {
                     )
                 }
             </header>
-        )
+        );
     }
 }
 

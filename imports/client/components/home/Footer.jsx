@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../../css/Footer.css';
 
-class Footer extends Component {
+class Footer extends React.Component {
     render() {
         return (
             <section id="footer">
@@ -17,7 +17,7 @@ class Footer extends Component {
                 </div>
                 <h4 className="trademark">donut</h4>
             </section>
-        )
+        );
     }
 }
 

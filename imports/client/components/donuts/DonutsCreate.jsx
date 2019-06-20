@@ -1,6 +1,6 @@
 import React from 'react';
-import {AutoForm, AutoField, ErrorField} from 'uniforms-unstyled';
-import {DonutRadio} from './DonutRadio'
+import { AutoForm, AutoField, ErrorField } from 'uniforms-unstyled';
+import { DonutRadio } from './DonutRadio'
 import DonutsSchema from '/imports/db/donuts/schema';
 import '../../css/DonutsCreate.css';
 import IsComestible from './IsComestible';
@@ -20,7 +20,7 @@ export default class DonutsCreate extends React.Component {
         };
     }
 
-    onSubmit = (data) => {
+    onSubmit = data => {
         const { selectedDonutImage, isComestible } = this.state;
 
         const imageUrl = selectedDonutImage;
@@ -78,6 +78,6 @@ export default class DonutsCreate extends React.Component {
                     </button>
                 </AutoForm>
             </main>
-        )
+        );
     }
 }

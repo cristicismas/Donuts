@@ -15,7 +15,7 @@
   margin-right: 5px;
 }
 
-.is-comestible-radio input[type="radio"] {
+.is-comestible-radio input[type='radio'] {
   background-color: transparent;
   border: 2px solid #ddd;
   border-radius: 50%;
@@ -28,14 +28,14 @@
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  transition: all .2s, box-shadow .1s;
+  transition: all 0.2s, box-shadow 0.1s;
 }
 
-.is-comestible-radio input[type="radio"]:checked {
+.is-comestible-radio input[type='radio']:checked {
   background-color: #eee;
   box-shadow: inset 0 0 0 4px #440e62;
 }
 
-.is-comestible-radio input[type="radio"]:active {
-  transform: scale(.8);
+.is-comestible-radio input[type='radio']:active {
+  transform: scale(0.8);
 }

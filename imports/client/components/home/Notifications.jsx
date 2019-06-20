@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../../css/Notifications.css';
 
-class Notifications extends Component {
+class Notifications extends React.Component {
     constructor(props) {
         super(props);
 
@@ -22,7 +22,7 @@ class Notifications extends Component {
             <div 
                 className="notifications" 
                 onClick={() => 
-                    this.setState({ showNotifications: !showNotifications})
+                    this.setState({ showNotifications: !showNotifications })
                 }>
                 <img src="/images/bell-icon.png" />
 
@@ -38,8 +38,5 @@ class Notifications extends Component {
         );
     }
 }
-
-Notifications.propTypes = {};
-Notifications.defaultProps = {};
 
 export default Notifications;

@@ -45,19 +45,23 @@
   max-width: 250px;
 }
 
-#footer .email-group ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+#footer .email-group ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
   color: #eee;
 }
 
-#footer .email-group ::-moz-placeholder { /* Firefox 19+ */
+#footer .email-group ::-moz-placeholder {
+  /* Firefox 19+ */
   color: #eee;
 }
 
-#footer .email-group :-ms-input-placeholder { /* IE 10+ */
+#footer .email-group :-ms-input-placeholder {
+  /* IE 10+ */
   color: #eee;
 }
 
-#footer .email-group :-moz-placeholder { /* Firefox 18- */
+#footer .email-group :-moz-placeholder {
+  /* Firefox 18- */
   color: #eee;
 }
 
@@ -133,7 +137,7 @@
   #footer #phone-number {
     font-size: 19px;
   }
-  
+
   #footer .email-group {
     flex-direction: column;
   }

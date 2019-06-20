@@ -36,8 +36,8 @@
   margin-bottom: 20px;
 }
 
-#create-donut-form input[type="text"],
-#create-donut-form input[type="number"] {
+#create-donut-form input[type='text'],
+#create-donut-form input[type='number'] {
   width: 100%;
   margin-top: 5px;
   background-color: #dcdcdc;
@@ -50,16 +50,16 @@
   display: block;
 }
 
-#create-donut-form button[type="submit"] {
+#create-donut-form button[type='submit'] {
   padding: 15px;
   background-color: #f26d7d;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
-#create-donut-form button[type="submit"]:hover {
+#create-donut-form button[type='submit']:hover {
   background-color: #e74457;
 }
 
@@ -70,15 +70,15 @@
   margin: 0;
 }
 
-#create-donut-form input[type=number] {
-  -moz-appearance:textfield;
+#create-donut-form input[type='number'] {
+  -moz-appearance: textfield;
 }
 
 @media only screen and (max-width: 500px) {
   #create-donut-form {
     width: 90%;
   }
-  
+
   #create-donut-form h1.form-title {
     margin-top: 0px;
   }

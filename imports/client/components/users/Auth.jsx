@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, { Fragment } from 'react';
 import '../../css/Auth.css';
 
 import Header from '../../components/home/Header';
@@ -6,7 +6,7 @@ import Footer from '../../components/home/Footer';
 import Login from '../../components/users/Login';
 import Register from '../../components/users/Register';
 
-class Auth extends Component {
+class Auth extends React.Component {
     render() {
         return (
             <Fragment>
@@ -23,7 +23,7 @@ class Auth extends Component {
 
                 <Footer />
             </Fragment>
-        )
+        );
     }
 }
 

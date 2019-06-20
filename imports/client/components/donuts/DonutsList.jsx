@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import {withTracker} from 'meteor/react-meteor-data';
-import {Donuts} from '/imports/db';
+import { withTracker } from 'meteor/react-meteor-data';
+import { Donuts } from '/imports/db';
 import '../../css/DonutsList.css';
 
 import Overlay from '../home/Overlay';
@@ -19,11 +19,11 @@ class DonutsList extends React.Component {
         this.editDonut = this.editDonut.bind(this);
     }
 
-    isDonutOwner = (donut) => {
+    isDonutOwner = donut => {
         return donut.userId === Meteor.userId()
     };
 
-    editDonut = (_id) => {
+    editDonut = _id => {
         this.setState({
             showDonutEditOverlay: true,
             donutToEditId: _id
@@ -37,13 +37,13 @@ class DonutsList extends React.Component {
         });
     }
 
-    removeDonut = (_id) => {
+    removeDonut = _id => {
         Meteor.call('donut.remove', _id);
     };
 
     render() {
-        const {showDonutEditOverlay, donutToEditId} = this.state;
-        const {isLoading, donuts} = this.props;
+        const { showDonutEditOverlay, donutToEditId } = this.state;
+        const { isLoading, donuts } = this.props;
 
         if (isLoading) {
             return <div>Loading...</div>
@@ -99,7 +99,7 @@ class DonutsList extends React.Component {
                     }
                 </div>
             </Fragment>
-        )
+        );
     }
 }
 

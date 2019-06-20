@@ -1,5 +1,5 @@
 import React from 'react';
-import {AutoForm, AutoField, ErrorField} from 'uniforms-unstyled';
+import { AutoForm, AutoField, ErrorField } from 'uniforms-unstyled';
 import SimpleSchema from 'simpl-schema';
 
 class Login extends React.Component {
@@ -8,7 +8,7 @@ class Login extends React.Component {
     }
 
     onSubmit = (data) => {
-        const {email, password} = data;
+        const { email, password } = data;
 
         Meteor.loginWithPassword(email, password, (err) => {
             if (!err) {
@@ -38,7 +38,7 @@ class Login extends React.Component {
                     </div>
                 </AutoForm>
             </main>
-        )
+        );
     }
 }
 
