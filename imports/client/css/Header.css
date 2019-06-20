@@ -38,3 +38,30 @@ header a h3 {
 header a h3:hover {
   border-bottom: 2px solid #eee;
 }
+
+@media only screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+
+  header > * {
+    margin: auto;
+  }
+
+  header nav {
+    flex-direction: column-reverse;
+  }
+
+  header a h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  header nav .notifications {
+    margin: auto;
+  }
+
+  header .notifications img {
+    margin-top: 10px;
+  }
+}
