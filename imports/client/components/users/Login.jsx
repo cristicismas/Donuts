@@ -22,6 +22,7 @@ class Login extends React.Component {
     render() {
         return (
             <main className="cc-main">
+                <h2 className="form-title">Log In</h2>
                 <AutoForm schema={LoginSchema} onSubmit={this.onSubmit}>
                     <AutoField name="email"/>
                     <ErrorField name="email"/>

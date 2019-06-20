@@ -27,6 +27,8 @@ class Register extends React.Component {
     render() {
         return (
             <main>
+                <h2 className="form-title">Sign Up</h2>
+                
                 <AutoForm schema={RegisterSchema} onSubmit={this.onSubmit}>
                     <AutoField name="email"/>
                     <ErrorField name="email"/>

@@ -8,6 +8,11 @@
   margin-top: 50px;
 }
 
+#auth .form-title {
+  text-align: center;
+  color: #444;
+}
+
 #auth .forms {
   display: flex;
   justify-content: space-evenly;
