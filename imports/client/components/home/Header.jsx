@@ -16,7 +16,7 @@ class Header extends Component {
                     (
                         <nav>
                             <Notifications />
-                            <a href="/donuts"><h3>All Donuts</h3></a>
+                            <a href="/donuts"><h3>Check Donuts</h3></a>
                         </nav>
                     ) : (
                         <a href="/login"><h3>Login / Register</h3></a>
