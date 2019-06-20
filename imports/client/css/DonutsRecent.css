@@ -89,3 +89,13 @@
 #recent-donuts .right-side > *:first-child {
   margin-left: 100px;
 }
+
+@media only screen and (max-width: 400px) {
+  #recent-donuts .donut-item {
+    width: 270px;
+  }
+  
+  #recent-donuts .right-side > *:first-child {
+    margin-left: 50px;
+  }
+}
