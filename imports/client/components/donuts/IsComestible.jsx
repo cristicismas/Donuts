@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../../css/IsComestible.css';
 
 export class IsComestible extends Component {
     render() {
