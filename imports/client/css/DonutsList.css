@@ -63,6 +63,10 @@
   border-radius: 50%;
 }
 
+#donuts-list .donut-item .action-buttons > * {
+  margin-left: 5px;
+}
+
 #donuts-list .donut-item .icon,
 #donuts-list .donut-item .icon-placeholder {
   height: 30px;
@@ -87,14 +91,15 @@
   #donuts-list .donut-item .donut-image {
     width: 50px;
     height: 50px;
-    margin: 15px 5px 0 5px;
+    margin: 10px 5px 0 5px;
   }
 
   #donuts-list .donut-item .right-side {
     margin-top: 10px;
   }
 
-  #donuts-list .donut-item .icon {
+  #donuts-list .donut-item .icon,
+  #donuts-list .donut-item .icon-placeholder {
     width: 23px;
     height: 23px;
   }
@@ -114,5 +119,17 @@
 
   #donuts-list .donut-item .right-side > * {
     margin-top: 5px;
+  }
+
+  #donuts-list .donut-item .donut-price {
+    margin-top: 7px;
+  }
+
+  #donuts-list .donut-item .donut-price + .icon {
+    margin-right: 0;
+  }
+
+  #donuts-list .donut-item .icon-placeholder {
+    display: none;
   }
 }

@@ -85,11 +85,13 @@ class DonutsList extends React.Component {
                                             }
                                         </div>
 
-                                        {this.isDonutOwner(donut) &&
-                                        <a href="" onClick={() => this.editDonut(donut._id)}><img className="icon action-icon" src="/images/pen-icon.png" /></a>}
+                                        <div className="action-buttons">
+                                            {this.isDonutOwner(donut) &&
+                                            <a href="" onClick={() => this.editDonut(donut._id)}><img className="icon action-icon" src="/images/pen-icon.png" /></a>}
 
-                                        {this.isDonutOwner(donut) &&
-                                        <a href="" onClick={() => this.removeDonut(donut._id)}><img className="icon action-icon" src="/images/trash-icon.png" /></a>}
+                                            {this.isDonutOwner(donut) &&
+                                            <a href="" onClick={() => this.removeDonut(donut._id)}><img className="icon action-icon" src="/images/trash-icon.png" /></a>}
+                                        </div>
                                     </div>
                                 </div>
                             )
