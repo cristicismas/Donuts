@@ -10,7 +10,7 @@ class Footer extends Component {
                     <div className="contact">
                         <p id="phone-number">+ 008 045 0477 045</p>
                         <div className="fill-space email-group">
-                            <input type="text" name="email" id="email" placeholder="Email" />
+                            <input type="email" name="email" id="email" placeholder="Email" />
                             <button id="subscribe">Subscribe</button>
                         </div>
                     </div>
