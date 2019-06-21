@@ -63,6 +63,20 @@
   background-color: #e74457;
 }
 
+#create-donut-form .price-input > input {
+  padding-right: 50px;
+}
+
+#create-donut-form .price-icon {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: -55px;
+  right: -260px;
+  filter: grayscale(100) contrast(50);
+  opacity: .8;
+}
+
 /* Hide arrows on <input type="number" /> */
 #create-donut-form input::-webkit-outer-spin-button,
 #create-donut-form input::-webkit-inner-spin-button {
@@ -81,5 +95,13 @@
 
   #create-donut-form h1.form-title {
     margin-top: 0px;
+  }
+
+  #create-donut-form .price-input {
+    padding-right: 0;
+  }
+  
+  #create-donut-form .price-icon {
+    display: none;
   }
 }

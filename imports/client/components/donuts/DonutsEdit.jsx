@@ -84,7 +84,8 @@ export default class DonutsEdit extends React.Component {
                     </div>
 
                     <div className="form-group">
-                        <AutoField name="price"/>
+                        <AutoField name="price" className="price-input" />
+                        <img className="icon price-icon" src="/images/dollar-icon.png" />
                         <ErrorField name="price" className="error"/>  
                     </div>
 

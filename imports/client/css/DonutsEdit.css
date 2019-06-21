@@ -40,6 +40,20 @@
   background-color: #e74457;
 }
 
+#donuts-edit .price-input > input {
+  padding-right: 50px;
+}
+
+#donuts-edit .price-icon {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: -55px;
+  right: -260px;
+  filter: grayscale(100) contrast(50);
+  opacity: .8;
+}
+
 /* Hide arrows on <input type="number" /> */
 #donuts-edit input::-webkit-outer-spin-button,
 #donuts-edit input::-webkit-inner-spin-button {
@@ -49,4 +63,14 @@
 
 #donuts-edit input[type='number'] {
   -moz-appearance: textfield;
+}
+
+@media only screen and (max-width: 500px) {
+  #donuts-edit .price-input {
+    padding-right: 0;
+  }
+  
+  #donuts-edit .price-icon {
+    display: none;
+  }
 }
