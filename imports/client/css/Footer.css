@@ -65,7 +65,7 @@
   color: #eee;
 }
 
-#footer .email-group button#subscribe {
+#footer .email-group button {
   border-radius: 10px;
   background-color: #fbaf5d;
   margin-left: -10px;
@@ -73,7 +73,7 @@
   transition: all .2s;
 }
 
-#footer .email-group button#subscribe:hover {
+#footer .email-group button:hover {
   background-color: #ffa03a;
 }
 
@@ -145,12 +145,14 @@
 
   #footer .email-group {
     flex-direction: column;
+    width: 100%;
+    margin: auto;
   }
 
   #footer .email-group input,
   #footer .email-group button {
     border-radius: 5px;
-    width: 90%;
-    margin: 15px auto;
+    margin: 10px auto;
+    width: 250px;
   }
 }
