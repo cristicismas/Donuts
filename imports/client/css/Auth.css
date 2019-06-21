@@ -48,6 +48,11 @@
   border-radius: 10px;
   cursor: pointer;
   font-size: 17px;
+  transition: all .2s;
+}
+
+#auth .forms button[type='submit']:hover {
+  background-color: #00aef3;
 }
 
 #auth .forms .buttons-group {
