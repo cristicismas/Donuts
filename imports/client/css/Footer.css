@@ -65,11 +65,16 @@
   color: #eee;
 }
 
-#footer .email-group button {
+#footer .email-group button#subscribe {
   border-radius: 10px;
   background-color: #fbaf5d;
   margin-left: -10px;
   cursor: pointer;
+  transition: all .2s;
+}
+
+#footer .email-group button#subscribe:hover {
+  background-color: #ffa03a;
 }
 
 #footer .trademark {
