@@ -56,7 +56,9 @@ class DonutsRecent extends React.Component {
             </Overlay>
         ) : null;
         
-        const recentDonuts = donuts.slice(donuts.length - 3, donuts.length);
+        const recentDonuts = donuts.length > 3 ?
+            donuts.slice(donuts.length - 3, donuts.length) :
+            donuts;
 
         const donutsToRender = recentDonuts.map(donut => {
             const donutDate = donut.createdAt.toLocaleDateString();
