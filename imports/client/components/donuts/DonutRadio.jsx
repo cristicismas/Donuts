@@ -7,7 +7,7 @@ export class DonutRadio extends Component {
     }
 
     render() {
-        const {selectedImage, selectedBorderColor} = this.props;
+        const { selectedImage, selectedBorderColor } = this.props;
 
         const donuts = this.props.donuts.map((image, index) => {
             const style = image === selectedImage ? {
